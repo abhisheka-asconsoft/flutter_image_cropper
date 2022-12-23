@@ -5,7 +5,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://www.jitpack.io" }
+        maven { url "https://jitpack.io"
+            content {
+                excludeGroupByRegex("com\\.github.yalantis*")
+            }
+        }
     }
 
     dependencies {
@@ -17,7 +21,7 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url "https://www.jitpack.io" }
+        maven { url "https://jitpack.io" }
     }
 }
 
